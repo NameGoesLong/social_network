@@ -16,4 +16,5 @@
 
 # index folder
 # TODO: delete the password and include this file at the end of the project
-index/index.go
+index/index_util.go
+util.go

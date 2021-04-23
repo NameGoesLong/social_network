@@ -6,14 +6,10 @@ import (
 	"github.com/olivere/elastic/v7"
 )
 
-const (
-	ES_URL = "http://10.128.0.4:9200"
-)
-
 func readFromES(query elastic.Query, index string) (*elastic.SearchResult, error) {
 	client, err := elastic.NewClient(
 		elastic.SetURL(ES_URL),
-		elastic.SetBasicAuth("elastic", "your_elasticsearch_password"))
+		elastic.SetBasicAuth("elastic", ES_PASS))
 	if err != nil {
 		return nil, err
 	}
